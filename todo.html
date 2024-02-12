@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="to-do-body">
+  <div class="constant-text-and-add-point">
+   <p class="constant-text">Todo</p>
+   <div class="task-adder"> <p class="">Create Task +</p></div>
+  
+  </div>
+
+  <div class="screen-splitter">
+
+  <div class="category-holder-outer">
+    <div class="createCategory">
+      Create category <div class="create-category-btn">+</div>
+    </div>
+
+    
+  <div class="todo-category">
+   <ul id="todo-lists-category">
+    <li class="" id="allTodos">
+    </li>
+   </ul>
+  </div>
+
+  <div class="task-hider">
+    <label for=""><input type="checkbox" name="hide" id="taskHider" class="task-hider" onclick="hideDoneTask()">Hide Done Task</label>
+   </div>
+
+   <div class="image">
+
+   </div>
+
+
+  </div>
+
+
+  <div class="task-board" id="taskBoard">
+    
+
+  </div>
+
+
+   <div class="modal">
+    
+    <div class="input-board-outter">
+
+    <div class="input-board-inner">
+
+    <form action="" id="taskForm">
+     
+     <div class="action-btns-holder">
+
+      <button class="action-btns cancel-btn" type="submit">
+        Cancel
+      </button>
+      <button class="action-btns add-btn" type="submit" id="addBtn">
+        Add  task
+      </button>
+
+    </div>
+
+
+    <div class="input-box-holder">
+      <label for="title">
+        Title <br> <br>
+        <input type="text" class="title-box" name="box-for-title" id="task_title">
+      </label>
+        <br> <br>
+       <label for="task-description-pad">
+        Description <br> <br>
+        <input type="text" class="task-description-box" name="box-for-task-description" id="content">
+      </label>
+    </div>
+      
+    <div class="category-area">
+    
+    <label for="tag"> Tag <select name="tag" id="tag_id" class="categorySectionTwo">
+      <option value="" selected = true disabled> select category</option>
+
+    </select></label>
+    </div>
+
+    </form>
+
+    </div>
+    </div>
+   </div>
+
+
+   <div class="categoryModal">
+    <div class="input-board-outter">
+
+    <div class="input-board-inner">
+    <form action="" id="categoryCreatingForm">
+     
+     <div class="action-btns-holder">
+
+      <button class="action-btns cancel-category-btn" type="submit">
+        Cancel
+      </button>
+      <button class="action-btns add-category-btn" type="submit">
+        Add  title
+      </button>
+
+    </div>
+
+
+    <div class="input-box-holder">
+      <label for="title">
+        Category name <br> <br>
+        <input type="text" class="category-name-box" name="title" id="categoryTitle">
+      </label>
+      <br>
+      <br>
+       <label for="title">
+        Category color <br>
+        <input type="color" class="category-name-box" name="category-color" id="categoryColor">
+      </label>
+    </div>
+
+    </form>
+    </div>
+    </div>
+   </div>  
+ </div>
+
+
+
+ <div class="update-modal">
+    <div class="input-board-outter">
+
+    <div class="input-board-inner">
+
+
+
+    <form action="" id="newTaskForm">
+     
+     <div class="action-btns-holder">
+
+      <button class="action-btns modal-update-cancel-btn" type="submit">
+        Cancel
+      </button>
+      <button class="action-btns update-btn" type="submit">
+        Update  task
+      </button>
+
+    </div>
+
+
+    <div class="input-box-holder">
+      <label for="title">
+       New Title <br> <br>
+        <input type="text" class="title-box" name="box-for-title" id="newTitleBox">
+      </label>
+        <br> <br>
+       <label for="task-description-pad">
+       New Description <br> <br>
+        <input type="text" class="task-description-box" name="box-for-task-description" id="newtaskDescription">
+      </label>
+    </div>
+      
+    <div class="category-area">
+    
+     <select name="category" id="selectedCategory" class="categorySectionTwo">
+      <option value="" selected = true disabled> select category</option>
+
+    </select>
+    </div>
+
+    </form>
+
+    </div>
+    </div>
+   </div>
+
+
+
+   <div class="updateCategoryModal">
+    <div class="input-board-outter">
+
+    <div class="input-board-inner">
+    <form action="" id="newCategoryForm">
+     
+     <div class="action-btns-holder">
+
+      <button class="action-btns category-update-cancel-btn" type="submit">
+        Cancel
+      </button>
+      <button class="action-btns update-category-btn" type="submit">
+        update  title
+      </button>
+
+    </div>
+
+
+    <div class="input-box-holder">
+      <label for="title">
+        New Category name <br> <br>
+        <input type="text" class="category-name-box" name="category-title" id="newCategoryTitle">
+      </label>
+    </div>
+
+    </form>
+    </div>
+    </div>
+   </div>  
+ </div>
+
+</body>
+<script src="index.js"></script>
+<script src="todo-tags.js"></script>
+<script src="todo-task.js"></script>
+</html>
+
+
+
+
